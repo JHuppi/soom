@@ -29,6 +29,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"modern-normalize": "^2.0.0",
 		"pollen-css": "^4.6.2"
 	}
 }
