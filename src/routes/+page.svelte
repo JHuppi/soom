@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>soom</h1>
+
+<style>
+    h1 {
+        font-size: var(--scale-10);
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
