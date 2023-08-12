@@ -1,9 +1,10 @@
 <script lang="ts">
+	import type { ComponentType } from 'svelte';
+
 	import Breathe from './icons/Breathe.svelte';
 	import BreatheSubMenu from './sub-menus/BreatheSubMenu.svelte';
 	import Clock from './icons/Clock.svelte';
 	import Info from './icons/Info.svelte';
-	import type { ComponentType } from 'svelte';
 	import Nothing from './Nothing.svelte';
 
 	let currentSubMenu: ComponentType = Nothing;
