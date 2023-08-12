@@ -15,7 +15,7 @@
 				currentSubMenu = Nothing;
 				break;
 			case 'breathe':
-				currentSubMenu === BreatheSubMenu ? Nothing : BreatheSubMenu;
+				currentSubMenu = currentSubMenu === BreatheSubMenu ? Nothing : BreatheSubMenu;
 				break;
 			case 'reminders':
 				currentSubMenu = Nothing;
