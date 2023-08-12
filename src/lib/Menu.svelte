@@ -15,11 +15,7 @@
 				currentSubMenu = Nothing;
 				break;
 			case 'breathe':
-				if (currentSubMenu === BreatheSubMenu) {
-					currentSubMenu = Nothing;
-					break;
-				}
-				currentSubMenu = BreatheSubMenu;
+				currentSubMenu === BreatheSubMenu ? Nothing : BreatheSubMenu;
 				break;
 			case 'reminders':
 				currentSubMenu = Nothing;
