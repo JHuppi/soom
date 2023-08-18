@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { onMount, type ComponentType } from 'svelte';
+	import { onDestroy, onMount, type ComponentType } from 'svelte';
 
 	import Circle from './icons/Circle.svelte';
 	import Pause from './icons/Pause.svelte';
 	import Play from './icons/Play.svelte';
 
 	let animation: Animation;
+	let animationInterval: number;
 	let animationState: 'running' | 'paused' = 'paused';
 	let duration: CSSNumberish = 0;
 	let dynamicCircle: Circle;
@@ -36,17 +37,21 @@
 			}
 		);
 		animation = new Animation(effect);
-		const animationInterval = setInterval(() => {
+		animationInterval = setInterval(() => {
 			const timing = animation.effect ? animation.effect.getComputedTiming() : {};
 			duration = timing.endTime ?? 0;
 			duration = Math.ceil((+(timing.endTime ?? 0) - +(timing.localTime ?? 0)) / 1000);
 		}, 100);
 		animation.onfinish = (_) => {
 			animationState = 'paused';
-			duration = 0;
+			duration = 30;
 			clearInterval(animationInterval);
 		};
 	});
+
+	onDestroy(() => {
+		clearInterval(animationInterval);
+	})
 
 	const togglePlayState = () => {
 		if (animation.playState === 'running') {
