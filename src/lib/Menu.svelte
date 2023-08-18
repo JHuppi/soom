@@ -9,7 +9,7 @@
 
 	let currentSubMenu: ComponentType = Nothing;
 
-	const handleClick = (e: Event, menuItem: string) => {
+	const handleClick = (_: Event, menuItem: string) => {
 		switch (menuItem) {
 			case 'settings':
 				currentSubMenu = Nothing;
@@ -83,9 +83,5 @@
 	menu > li > button > span {
 		-webkit-user-select: none;
 		user-select: none;
-	}
-
-	.active {
-		color: var(--color-grey-800);
 	}
 </style>
