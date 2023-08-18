@@ -10,8 +10,15 @@
 	let animationState: 'running' | 'paused' = 'paused';
 	let duration: CSSNumberish = 0;
 	let dynamicCircle: Circle;
+	let minutes: string = "00";
+	let seconds: string = "00";
 	let stateIcon: ComponentType;
-	$: stateIcon = animationState === 'running' ? Pause : Play;
+
+	$: {
+		minutes = Math.floor(+duration / 60).toString().padStart(2, '0');
+		seconds = (+duration % 60).toString().padStart(2, '0');
+		stateIcon = animationState === 'running' ? Pause : Play;
+	}
 
 	onMount(() => {
 		const circleLength = dynamicCircle.element().path.getTotalLength();
@@ -33,7 +40,7 @@
 			],
 			{
 				duration: 10 * 1000,
-				iterations: 3
+				iterations: 18
 			}
 		);
 		animation = new Animation(effect);
@@ -44,8 +51,7 @@
 		}, 100);
 		animation.onfinish = (_) => {
 			animationState = 'paused';
-			duration = 30;
-			clearInterval(animationInterval);
+			duration = 180000;
 		};
 	});
 
@@ -64,7 +70,7 @@
 	};
 </script>
 
-{duration}
+<h2>{minutes}:{seconds}</h2>
 <button on:click={() => togglePlayState()}>
 	<Circle class="icon static" />
 	<Circle bind:this={dynamicCircle} class="icon dynamic" />
@@ -100,5 +106,11 @@
 		padding: 0;
 		position: relative;
 		width: var(--size-64);
+	}
+
+	h2 {
+		font-size: var(--scale-6);
+		margin: 0 auto;
+		text-align: center;
 	}
 </style>
