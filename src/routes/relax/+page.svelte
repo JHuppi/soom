@@ -3,7 +3,7 @@
 </script>
 
 <h1>relax</h1>
-<Animation />
+<Animation iterations={18} inhale={4} exhale={6} />
 
 <style>
 	h1 {
