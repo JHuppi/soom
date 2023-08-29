@@ -63,6 +63,7 @@
 					offset: exhaleOffset
 				},
 				{
+					strokeDasharray: circleLength,
 					strokeDashoffset: circleLength,
 					offset: hold2Offset
 				}
