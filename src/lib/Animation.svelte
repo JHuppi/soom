@@ -16,24 +16,23 @@
 
 	let animation: Animation;
 	let animationDuration: number;
-	let animationIntervalID: number;
 	let animationState: 'running' | 'paused' = 'paused';
 	let duration: CSSNumberish = 0;
 	let dynamicCircle: Circle;
-	let inhaleOffset: number;
-	let hold1Offset: number;
 	let exhaleOffset: number;
+	let hold1Offset: number;
 	let hold2Offset: number;
+	let inhaleOffset: number;
 	let minutes: string = '00';
 	let seconds: string = '00';
 	let stateIcon: ComponentType;
 
 	$: {
 		animationDuration = inhale + hold1 + exhale + hold2;
-		inhaleOffset = inhale / animationDuration;
-		hold1Offset = (inhale + hold1) / animationDuration;
 		exhaleOffset = (inhale + hold1 + exhale) / animationDuration;
+		hold1Offset = (inhale + hold1) / animationDuration;
 		hold2Offset = (inhale + hold1 + exhale + hold2) / animationDuration;
+		inhaleOffset = inhale / animationDuration;
 		minutes = Math.floor(+duration / 60)
 			.toString()
 			.padStart(2, '0');
@@ -73,20 +72,21 @@
 				iterations
 			}
 		);
+
 		animation = new Animation(effect);
-		animationIntervalID = setInterval(() => {
+
+		const animationIntervalID = setInterval(() => {
 			const timing = animation.effect ? animation.effect.getComputedTiming() : {};
 			duration = timing.endTime ?? 0;
 			duration = Math.ceil((+(timing.endTime ?? 0) - +(timing.localTime ?? 0)) / 1000);
 		}, 100);
+
 		animation.onfinish = () => {
 			animationState = 'paused';
 			duration = 180000;
 		};
-	});
 
-	onDestroy(() => {
-		clearInterval(animationIntervalID);
+		return () => clearInterval(animationIntervalID);
 	});
 
 	const togglePlayState = () => {
