@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onDestroy, onMount, type ComponentType } from 'svelte';
+	import { onMount, type ComponentType } from 'svelte';
 
 	import Circle from './icons/Circle.svelte';
 	import Pause from './icons/Pause.svelte';
