@@ -53,7 +53,12 @@
 		background-color: var(--color-grey-50);
 		border-top-left-radius: var(--radius-xl);
 		border-top-right-radius: var(--radius-xl);
+		bottom: 0;
 		color: var(--color-grey-500);
+		left: 0;
+		position: absolute;
+		width: 100vw;
+		z-index: var(--layer-top);
 	}
 
 	menu {
