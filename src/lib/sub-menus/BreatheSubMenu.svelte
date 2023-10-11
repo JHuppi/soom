@@ -6,8 +6,9 @@
 
 <div in:fade out:fade={{ duration: 200 }}>
 	<ButtonLink href="/raise" copy=raise />
-	<ButtonLink href="/relax" copy="relax" />
 	<ButtonLink href="/recharge" copy="recharge" />
+	<ButtonLink href="/relax" copy="relax" />
+	<ButtonLink href="/rest" copy="rest" />
 </div>
 
 <style>
