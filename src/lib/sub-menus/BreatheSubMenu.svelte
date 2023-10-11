@@ -5,6 +5,7 @@
 </script>
 
 <div in:fade out:fade={{ duration: 200 }}>
+	<ButtonLink href="/raise" copy=raise />
 	<ButtonLink href="/relax" copy="relax" />
 	<ButtonLink href="/recharge" copy="recharge" />
 </div>
