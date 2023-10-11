@@ -1,10 +1,10 @@
 <script>
-	import { fade } from 'svelte/transition';
+	import { slide } from 'svelte/transition';
 
 	import ButtonLink from '../ButtonLink.svelte';
 </script>
 
-<div in:fade out:fade={{ duration: 200 }}>
+<div in:slide={{duration: 600}} out:slide={{ duration: 200 }}>
 	<ButtonLink href="/raise" copy=raise />
 	<ButtonLink href="/recharge" copy="recharge" />
 	<ButtonLink href="/relax" copy="relax" />
