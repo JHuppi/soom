@@ -6,7 +6,9 @@
 </script>
 
 <div id="app">
-	<slot />
+	<div id="content">
+		<slot />
+	</div>
 	<Menu />
 </div>
 
@@ -17,10 +19,14 @@
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-		justify-content: space-between;
+		justify-content: flex-end;
 		margin: 0 auto;
 		max-width: var(--width-xs);
 		padding: var(--size-2);
 		padding-bottom: 0;
+	}
+
+	#content {
+		margin-bottom: var(--size-24);
 	}
 </style>

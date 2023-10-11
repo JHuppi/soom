@@ -9,7 +9,7 @@
 		font-size: var(--scale-8);
 		color: var(--color-grey-500);
 		line-height: 1;
-		margin: var(--size-12) auto 0;
+		margin: var(--size-10) auto 0;
 		text-align: center;
 	}
 </style>

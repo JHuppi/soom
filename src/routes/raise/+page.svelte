@@ -3,5 +3,14 @@
 	import RoutineHeader from '$lib/RoutineHeader.svelte';
 </script>
 
-<RoutineHeader copy="raise" />
-<RoutineAnimation iterations={15} inhale={6} exhale={2} />
+<div>
+    <RoutineHeader copy="raise" />
+    <RoutineAnimation iterations={15} inhale={6} exhale={2} />
+</div>
+
+<style>
+    div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+</style>
