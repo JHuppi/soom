@@ -57,7 +57,7 @@
 		color: var(--color-grey-500);
 		left: 0;
 		position: absolute;
-		width: 100vw;
+		width: var(--width-xs);
 		z-index: var(--layer-top);
 	}
 

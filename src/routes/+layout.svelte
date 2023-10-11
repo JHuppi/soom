@@ -24,6 +24,7 @@
 		max-width: var(--width-xs);
 		padding: var(--size-2);
 		padding-bottom: 0;
+		position: relative;
 	}
 
 	#content {
