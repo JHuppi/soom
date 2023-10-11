@@ -101,12 +101,14 @@
 	};
 </script>
 
-<h2>{minutes}:{seconds}</h2>
-<button on:click={() => togglePlayState()}>
-	<Circle class="icon static" />
-	<Circle bind:this={dynamicCircle} class="icon dynamic" />
-	<svelte:component this={stateIcon} class="icon play-state" />
-</button>
+<div>
+	<h2>{minutes}:{seconds}</h2>
+	<button on:click={() => togglePlayState()}>
+		<Circle class="icon static" />
+		<Circle bind:this={dynamicCircle} class="icon dynamic" />
+		<svelte:component this={stateIcon} class="icon play-state" />
+	</button>
+</div>
 
 <style>
 	:global(.icon) {
@@ -131,6 +133,7 @@
 		aspect-ratio: var(--ratio-square);
 		background-color: inherit;
 		border: none;
+		display: block;
 		color: var(--color-grey-700);
 		cursor: pointer;
 		margin: 0 auto;
