@@ -13,9 +13,12 @@
 </div>
 
 <style>
-	#app {
+	@global body {
 		background-color: var(--color-grey-100);
 		color: var(--color-grey-800);
+	}
+
+	#app {
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
