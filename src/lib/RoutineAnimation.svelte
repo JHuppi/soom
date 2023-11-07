@@ -78,14 +78,16 @@
 
 		const animationIntervalID = setInterval(() => {
 			const timing = animation.effect ? animation.effect.getComputedTiming() : {};
-			duration = timing.endTime ?? 0;
-			duration = Math.ceil((+(timing.endTime ?? 0) - +(timing.localTime ?? 0)) / 1000);
+			if (animation.playState === "finished") {
+				duration = +(timing.endTime ?? 0) / 1000;
+			} else {
+				duration = Math.ceil((+(timing.endTime ?? 0) - +(timing.localTime ?? 0)) / 1000);
+			}
 		}, 100);
 
 		animation.onfinish = () => {
 			animationState = 'paused';
-			duration = 180000;
-		};
+		}
 
 		return () => clearInterval(animationIntervalID);
 	});
