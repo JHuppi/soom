@@ -13,7 +13,7 @@
 </div>
 
 <style>
-	@global body {
+	:global(body) {
 		background-color: var(--color-grey-100);
 		color: var(--color-grey-800);
 	}
