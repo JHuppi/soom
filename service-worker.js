@@ -1,8 +1,8 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), l = [
-  e + "/app/immutable/entry/app.e2eab536.js",
+  e + "/app/immutable/entry/app.9fe34414.js",
   e + "/app/immutable/assets/0.418f0db2.css",
   e + "/app/immutable/nodes/0.16ac1ecc.js",
-  e + "/app/immutable/nodes/1.6a014892.js",
+  e + "/app/immutable/nodes/1.0682c692.js",
   e + "/app/immutable/assets/2.9de49fb8.css",
   e + "/app/immutable/nodes/2.ccd18dc1.js",
   e + "/app/immutable/nodes/3.dfaf519a.js",
@@ -13,14 +13,14 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), l
   e + "/app/immutable/chunks/RoutineWrapper.03856647.js",
   e + "/app/immutable/chunks/index.83bb740a.js",
   e + "/app/immutable/chunks/scheduler.ab84cf82.js",
-  e + "/app/immutable/chunks/singletons.e6bcbb31.js",
-  e + "/app/immutable/entry/start.1b81a374.js"
+  e + "/app/immutable/chunks/singletons.83a06537.js",
+  e + "/app/immutable/entry/start.21f1f371.js"
 ], m = [
   e + "/.nojekyll",
   e + "/app.webmanifest",
   e + "/favicon.png",
   e + "/soom-logo.svg"
-], u = "1699400152122", o = [...l, ...m], i = `cache-${u}`, p = self;
+], u = "1699400253590", o = [...l, ...m], i = `cache-${u}`, p = self;
 p.addEventListener("install", (a) => {
   const t = async () => {
     await (await caches.open(i)).addAll(o);
