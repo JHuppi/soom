@@ -8,7 +8,7 @@
     "background_color": "#f2f4f5",
     "icons": [
         {
-            "src": "/soom-logo.svg",
+            "src": "soom-logo.svg",
             "sizes": "any",
             "type": "image/svg+xml"
         }
