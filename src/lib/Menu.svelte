@@ -22,6 +22,10 @@
 				break;
 		}
 	};
+
+	const handleSubMenuClosure = (_: Event) => {
+		currentSubMenu = Nothing;
+	};
 </script>
 
 <div id="main-menu">
@@ -45,7 +49,7 @@
 			</button>
 		</li>
 	</menu>
-	<svelte:component this={currentSubMenu} />
+	<svelte:component this={currentSubMenu}	on:close={handleSubMenuClosure} />
 </div>
 
 <style>

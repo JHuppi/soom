@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	export let href = '/';
 	export let copy = 'button';
+	export let onClick = () => {};
 </script>
 
-<a {href}>
+<a {href} on:click={onClick}>
 	{copy}
 </a>
 
