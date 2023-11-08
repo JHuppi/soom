@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<link rel="manifest" href="app.webmanifest" />
+		<link rel="manifest" href="manifest.json" />
 		<link rel="apple-touch-icon" href="./soom-logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		
 		<link href="./app/immutable/assets/0.418f0db2.css" rel="stylesheet">
 		<link href="./app/immutable/assets/RoutineWrapper.5fca8c1c.css" rel="stylesheet">
-		<link rel="modulepreload" href="./app/immutable/entry/start.5d2bd780.js">
+		<link rel="modulepreload" href="./app/immutable/entry/start.20c8f10b.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/scheduler.ab84cf82.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/singletons.d3e9dd2d.js">
-		<link rel="modulepreload" href="./app/immutable/entry/app.e5863e78.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/singletons.e24fed50.js">
+		<link rel="modulepreload" href="./app/immutable/entry/app.0fde5dc4.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/index.83bb740a.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/0.16ac1ecc.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/4.9ed30a21.js">
@@ -23,7 +23,7 @@
 			
 			<script>
 				{
-					__sveltekit_1gpfspe = {
+					__sveltekit_1a049ci = {
 						assets: "/soom",
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
@@ -34,8 +34,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./app/immutable/entry/start.5d2bd780.js"),
-						import("./app/immutable/entry/app.e5863e78.js")
+						import("./app/immutable/entry/start.20c8f10b.js"),
+						import("./app/immutable/entry/app.0fde5dc4.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
