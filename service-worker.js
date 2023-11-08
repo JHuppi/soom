@@ -1,8 +1,8 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), l = [
-  e + "/app/immutable/entry/app.0fde5dc4.js",
+  e + "/app/immutable/entry/app.07d79749.js",
   e + "/app/immutable/assets/0.418f0db2.css",
   e + "/app/immutable/nodes/0.16ac1ecc.js",
-  e + "/app/immutable/nodes/1.c9486739.js",
+  e + "/app/immutable/nodes/1.0147a860.js",
   e + "/app/immutable/assets/2.9de49fb8.css",
   e + "/app/immutable/nodes/2.ccd18dc1.js",
   e + "/app/immutable/nodes/3.dfaf519a.js",
@@ -13,14 +13,14 @@ const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), l
   e + "/app/immutable/chunks/RoutineWrapper.03856647.js",
   e + "/app/immutable/chunks/index.83bb740a.js",
   e + "/app/immutable/chunks/scheduler.ab84cf82.js",
-  e + "/app/immutable/chunks/singletons.e24fed50.js",
-  e + "/app/immutable/entry/start.20c8f10b.js"
+  e + "/app/immutable/chunks/singletons.d5406929.js",
+  e + "/app/immutable/entry/start.8bed7455.js"
 ], m = [
   e + "/.nojekyll",
   e + "/favicon.png",
   e + "/manifest.json",
   e + "/soom-logo.svg"
-], u = "1699402636995", o = [...l, ...m], i = `cache-${u}`, p = self;
+], u = "1699402803409", o = [...l, ...m], i = `cache-${u}`, p = self;
 p.addEventListener("install", (a) => {
   const t = async () => {
     await (await caches.open(i)).addAll(o);
@@ -38,14 +38,14 @@ p.addEventListener("fetch", (a) => {
   if (a.request.method !== "GET")
     return;
   const t = async () => {
-    const s = new URL(a.request.url), c = await caches.open(i);
+    const s = new URL(a.request.url), n = await caches.open(i);
     if (o.includes(s.pathname))
-      return c.match(s.pathname);
+      return n.match(s.pathname);
     try {
-      const n = await fetch(a.request);
-      return n.status === 200 && c.put(a.request, n.clone()), n;
+      const c = await fetch(a.request);
+      return c.status === 200 && n.put(a.request, c.clone()), c;
     } catch {
-      return c.match(a.request);
+      return n.match(a.request);
     }
   };
   a.respondWith(t());
