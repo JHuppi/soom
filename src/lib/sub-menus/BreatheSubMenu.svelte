@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { createEventDispatcher } from 'svelte';
 	import { slide } from 'svelte/transition';
 
@@ -6,16 +7,16 @@
 
 	const dispatch = createEventDispatcher();
 
-	const triggerSubMenuClosure = () => { 
-		dispatch("close");
-	}
+	const triggerSubMenuClosure = () => {
+		dispatch('close');
+	};
 </script>
 
-<div in:slide={{duration: 600}} out:slide={{ duration: 200 }}>
-	<ButtonLink href="/raise" copy=raise onClick={triggerSubMenuClosure} />
-	<ButtonLink href="/recharge" copy="recharge" onClick={triggerSubMenuClosure} />
-	<ButtonLink href="/relax" copy="relax" onClick={triggerSubMenuClosure} />
-	<ButtonLink href="/rest" copy="rest" onClick={triggerSubMenuClosure}/>
+<div in:slide={{ duration: 600 }} out:slide={{ duration: 200 }}>
+	<ButtonLink href="{base}/raise" copy="raise" onClick={triggerSubMenuClosure} />
+	<ButtonLink href="{base}/recharge" copy="recharge" onClick={triggerSubMenuClosure} />
+	<ButtonLink href="{base}/relax" copy="relax" onClick={triggerSubMenuClosure} />
+	<ButtonLink href="{base}/rest" copy="rest" onClick={triggerSubMenuClosure} />
 </div>
 
 <style>
