@@ -60,8 +60,9 @@
 		bottom: 0;
 		color: var(--color-grey-500);
 		left: 0;
+		max-width: var(--width-xs);
 		position: absolute;
-		width: var(--width-xs);
+		width: 100%;
 		z-index: var(--layer-top);
 	}
 
