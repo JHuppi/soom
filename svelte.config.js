@@ -17,7 +17,6 @@ const config = {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		},
 		serviceWorker: {
-			register: false,
 			files: (filename) => !/\.nojekyll/.test(filename)
 		}
 	}
