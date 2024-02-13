@@ -9,13 +9,13 @@
 		
 		<link href="./app/immutable/assets/0.418f0db2.css" rel="stylesheet">
 		<link href="./app/immutable/assets/RoutineWrapper.5fca8c1c.css" rel="stylesheet">
-		<link rel="modulepreload" href="./app/immutable/entry/start.fa8640e1.js">
+		<link rel="modulepreload" href="./app/immutable/entry/start.8819c0d0.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/scheduler.ab84cf82.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/singletons.78d4d55a.js">
-		<link rel="modulepreload" href="./app/immutable/chunks/paths.4e956f1c.js">
-		<link rel="modulepreload" href="./app/immutable/entry/app.e9fc42d8.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/singletons.a9b2822b.js">
+		<link rel="modulepreload" href="./app/immutable/chunks/paths.7b53810b.js">
+		<link rel="modulepreload" href="./app/immutable/entry/app.944eb0b1.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/index.83bb740a.js">
-		<link rel="modulepreload" href="./app/immutable/nodes/0.f79fee87.js">
+		<link rel="modulepreload" href="./app/immutable/nodes/0.8e291915.js">
 		<link rel="modulepreload" href="./app/immutable/nodes/6.aa153c17.js">
 		<link rel="modulepreload" href="./app/immutable/chunks/RoutineWrapper.03856647.js">
 	</head>
@@ -24,7 +24,7 @@
 			
 			<script>
 				{
-					__sveltekit_gi23br = {
+					__sveltekit_1nfb3rm = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -34,8 +34,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./app/immutable/entry/start.fa8640e1.js"),
-						import("./app/immutable/entry/app.e9fc42d8.js")
+						import("./app/immutable/entry/start.8819c0d0.js"),
+						import("./app/immutable/entry/app.944eb0b1.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
@@ -44,6 +44,12 @@
 							error: null
 						});
 					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('./service-worker.js');
+						});
+					}
 				}
 			</script>
 		</div>
