@@ -2,7 +2,7 @@
     "name": "soom - breath simply",
     "short_name": "soom",
     "description": "a minimal breathwork app",
-    "start_url": "/soom/",
+    "start_url": "https://jhuppi.github.io/soom/",
     "display": "standalone",
     "theme_color": "#2c343f",
     "background_color": "#f2f4f5",
