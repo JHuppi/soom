@@ -14,7 +14,11 @@ const config = {
 		appDir: 'app',
 		adapter: adapter(),
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/soom'
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		},
+		serviceWorker: {
+			register: false,
+			files: (filename) => !/\.nojekyll/.test(filename)
 		}
 	}
 };

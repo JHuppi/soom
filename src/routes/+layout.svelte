@@ -2,7 +2,24 @@
 	import 'modern-normalize';
 	import 'pollen-css';
 
+	import { dev } from '$app/environment';
+	import { base } from '$app/paths';
+
 	import Menu from '$lib/Menu.svelte';
+
+	if ('serviceWorker' in navigator) {
+		addEventListener('load', () => {
+			navigator.serviceWorker
+				.register(`${base}/service-worker.js`, {
+					type: dev ? 'module' : 'classic'
+				})
+				.then(
+					(registration) => console.log('Success:', registration),
+					(error) => console.error('Failure:', error)
+				);
+
+		});
+	}
 </script>
 
 <div id="app">
