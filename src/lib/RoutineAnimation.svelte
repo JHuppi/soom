@@ -26,6 +26,7 @@
 	let minutes: string = '00';
 	let seconds: string = '00';
 	let stateIcon: ComponentType;
+	let wakeLock: WakeLockSentinel | null = null;
 
 	$: {
 		animationDuration = inhale + hold1 + exhale + hold2;
@@ -78,7 +79,7 @@
 
 		const animationIntervalID = setInterval(() => {
 			const timing = animation.effect ? animation.effect.getComputedTiming() : {};
-			if (animation.playState === "finished") {
+			if (animation.playState === 'finished') {
 				duration = +(timing.endTime ?? 0) / 1000;
 			} else {
 				duration = Math.ceil((+(timing.endTime ?? 0) - +(timing.localTime ?? 0)) / 1000);
@@ -87,18 +88,35 @@
 
 		animation.onfinish = () => {
 			animationState = 'paused';
+			wakeLock?.release();
+			wakeLock = null;
+		};
+
+		return () => {
+			clearInterval(animationIntervalID);
+			wakeLock?.release();
+			wakeLock = null;
+		};
+	});
+
+	const requestWakeLock = async () => {
+		if (!('wakeLock' in navigator)) {
+			return;
 		}
 
-		return () => clearInterval(animationIntervalID);
-	});
+		wakeLock = await navigator.wakeLock.request('screen');
+	};
 
 	const togglePlayState = () => {
 		if (animation.playState === 'running') {
 			animation.pause();
 			animationState = 'paused';
+			wakeLock?.release();
+			wakeLock = null;
 		} else {
 			animation.play();
 			animationState = 'running';
+			requestWakeLock();
 		}
 	};
 </script>
