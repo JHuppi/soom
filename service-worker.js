@@ -1,26 +1,26 @@
 const e = /* @__PURE__ */ location.pathname.split("/").slice(0, -1).join("/"), m = [
-  e + "/app/immutable/entry/app.24f91d9f.js",
+  e + "/app/immutable/entry/app.931ffd13.js",
   e + "/app/immutable/assets/0.cb58c5e6.css",
-  e + "/app/immutable/nodes/0.49ebd435.js",
-  e + "/app/immutable/nodes/1.da0279ec.js",
-  e + "/app/immutable/assets/2.9de49fb8.css",
-  e + "/app/immutable/nodes/2.ccd18dc1.js",
-  e + "/app/immutable/nodes/3.dfaf519a.js",
-  e + "/app/immutable/nodes/4.9ed30a21.js",
-  e + "/app/immutable/nodes/5.390e4b9b.js",
-  e + "/app/immutable/nodes/6.aa153c17.js",
+  e + "/app/immutable/nodes/0.b48bb19c.js",
+  e + "/app/immutable/nodes/1.d7e47a43.js",
+  e + "/app/immutable/assets/2.99161510.css",
+  e + "/app/immutable/nodes/2.c520c9e6.js",
+  e + "/app/immutable/nodes/3.d4f660b3.js",
+  e + "/app/immutable/nodes/4.d3b6170c.js",
+  e + "/app/immutable/nodes/5.cc139456.js",
+  e + "/app/immutable/nodes/6.bbd82685.js",
   e + "/app/immutable/assets/RoutineWrapper.5fca8c1c.css",
-  e + "/app/immutable/chunks/RoutineWrapper.03856647.js",
+  e + "/app/immutable/chunks/RoutineWrapper.3bad8bf7.js",
   e + "/app/immutable/chunks/index.83bb740a.js",
-  e + "/app/immutable/chunks/paths.73537ce3.js",
+  e + "/app/immutable/chunks/paths.f58ec1e1.js",
   e + "/app/immutable/chunks/scheduler.ab84cf82.js",
-  e + "/app/immutable/chunks/singletons.3c3e729b.js",
-  e + "/app/immutable/entry/start.f9278578.js"
+  e + "/app/immutable/chunks/singletons.afcfb48c.js",
+  e + "/app/immutable/entry/start.01399aed.js"
 ], l = [
   e + "/favicon.png",
   e + "/manifest.json",
   e + "/soom-logo.svg"
-], u = "1707863792139", o = [...m, ...l], i = `cache-${u}`, p = self;
+], u = "1709141786778", o = [...m, ...l], i = `cache-${u}`, p = self;
 p.addEventListener("install", (a) => {
   const t = async () => {
     await (await caches.open(i)).addAll(o);
