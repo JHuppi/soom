@@ -2,13 +2,13 @@
 	"name": "soom - breath simply",
 	"short_name": "soom",
 	"description": "a minimal breathwork app",
-	"start_url": "/rack/",
+	"start_url": "/soom/",
 	"display": "standalone",
 	"theme_color": "#2c343f",
 	"background_color": "#f2f4f5",
 	"icons": [
 		{
-			"src": "/rack/soom-logo.svg",
+			"src": "/soom/soom-logo.svg",
 			"sizes": "any",
 			"type": "image/svg+xml"
 		}
@@ -18,25 +18,25 @@
 			"name": "raise session",
 			"short_name": "raise",
 			"description": "open a raise breathwork session",
-			"url": "/rack/raise"
+			"url": "/soom/raise"
 		},
 		{
 			"name": "recharge session",
 			"short_name": "recharge",
 			"description": "open a recharge breathwork session",
-			"url": "/rack/recharge"
+			"url": "/soom/recharge"
 		},
 		{
 			"name": "relax session",
 			"short_name": "relax",
 			"description": "open a relax breathwork session",
-			"url": "/relax"
+			"url": "/soom/relax"
 		},
 		{
 			"name": "rest session",
 			"short_name": "rest",
 			"description": "open a rest breathwork session",
-			"url": "/rack/rest"
+			"url": "/soom/rest"
 		}
 	]
 }
